@@ -11,9 +11,9 @@
 * HTML, CSS & JavaScript, Node, MongoDB, Mongoose
 
 ### **Wireframes:**
-![cat-foster-database-home-page](file.png)
+![cat-foster-database-home-page](./images/home-page.png)
 
-![cat-foster-database-available-cats](file.png)
+![cat-foster-database-available-cats](./images/available-cats.png)
 
 ### **User Stories:**
 As a visitor
