@@ -1,9 +1,7 @@
 const Foster = require('../models/Foster');
 
 module.exports = {
-  index,
-  addFact,
-  delFact
+  index
 };
 
 function index(req, res, next) {
@@ -24,12 +22,4 @@ function index(req, res, next) {
       sortKey
     });
   });
-}
-
-function addFact(req, res, next) {
-  
-}
-
-function delFact(req, res, next) {
-
 }

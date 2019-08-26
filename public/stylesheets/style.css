@@ -2,8 +2,9 @@ body {
   background-color: #EFEBE9;
   background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
 }
-.nav-wrapper {
-  height: 500px;
+
+.navbar-fixed {
+  font-family: 'Livvic', sans-serif;
 }
 
 .brand-logo {
@@ -25,9 +26,8 @@ body {
 
 .catContainer{
   position: absolute;
-  top: 40px;
+  top: 64px;
   right: 0px;
-  /* margin: 20px 0 0 0; */
 }
 
 .volunteerCat {
@@ -37,40 +37,36 @@ body {
 .introMessage {
   width: 55%;
   height: 505px;
-  background-color: #5DADE2;
+  background-color: #A3E4D7;
   position: absolute;
   top: 0px;
   right: 0;
-  border: 1px solid black;
 }
 
 .intro h1 {
   text-transform: uppercase;
-  font-size: 80px;
+  font-size: 90px;
   font-weight: 900;
   line-height: 50px;
-  position: absolute;
-  bottom: 60px;
-  left: 15px;
-  padding-left: 15px;
-  margin: 0;
+  display: grid;
+  text-align: center;
+  margin-top: 200px;
 }
 
 .intro h1 span {
-  display: block;
   font-size: 30px;
-  text-transform: none;
   font-weight: 500;
-  margin-left: 12px;
   line-height: 60px;
+  text-transform: none;
+  display: grid;
+  text-align: center;
+  letter-spacing: 1.5px;
 }
 
 p {
   position: absolute;
-  bottom: 10px;
-  left: 15px;
-  color: white;
-  padding-left: 30px;
+  display: grid;
+  text-align: center;
 }
 
 /* .introPhotos {
