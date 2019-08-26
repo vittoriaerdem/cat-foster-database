@@ -12,4 +12,4 @@ router.post('/cats', fostersCtrl.addFact);
 // DELETE /facts/:id
 router.delete('/cats/:id', fostersCtrl.delFact);
 
-module.exports = router;
+module.exports = router;    
