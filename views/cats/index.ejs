@@ -1,5 +1,21 @@
 <%- include('../partials/header') %>
 
+<table>
+    <thead>
+      <tr>
+        <t>Name</th>
+        <th>Age</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>SmallCat</td>
+        <td>2 years old</td>
+      </tr>
+    </tbody>
+  </table>
+
 <section id="show-page">
     <div>Name: </div>
     <div><%= cat.name %></div>
@@ -13,7 +29,27 @@
     <div><%= cat.fiv %></div>
     <div>Location: </div>
     <div><%= cat.location %></div>
+    <div>Location: </div>
+    <div>East Austin</div>
   </section>
 
-  <%- include('../partials/footer') %>
+  <div class="divTable">
+      <div class="divTableBody">
+      <div class="divTableRow">
+      <div class="divTableCell">Name:</div>
+      <div class="divTableCell">SmallCat</div>
+  </div>
+      <div class="divTableRow">
+      <div class="divTableCell">Age:</div>
+      <div class="divTableCell">2 Years Old</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">Sex:</div>
+      <div class="divTableCell">Female</div>
+      </div>
+      </div>
+      </div>
 
+
+
+  <%- include('../partials/footer') %>
