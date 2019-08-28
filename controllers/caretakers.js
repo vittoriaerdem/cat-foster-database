@@ -1,5 +1,4 @@
 var Caretaker = require('../models/caretaker');
-var Cat = require('../models/cat');
 
 module.exports = {
   new: newCaretaker,

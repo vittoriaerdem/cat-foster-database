@@ -2,8 +2,11 @@
 
 <!-- THIS IS FOR A NEW CAT'S INFO TO BE CREATED -->
 
-<h2>Enter a New Movie</h2>
-  <form action="/cats" method="POST">
+<h2>Add a New Cat</h2>
+  <form id="addCat" action="/cats" method="POST">
+    <label>Photo:
+        <input type="text" name="photo">
+    </label>
     <label>Name:
       <input type="text" name="name">
     </label>
@@ -25,8 +28,8 @@
     <br>
     <label>FIV +:
       <select name="fiv">
-      <option value="Positive">Yes, Positive</option>
-      <option value="Negative">No, Negative</option>
+      <option value="Yes, Positive">Yes, Positive</option>
+      <option value="No, Negative">No, Negative</option>
       </select>
     </label>
     <br>

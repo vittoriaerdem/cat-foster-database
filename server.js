@@ -41,7 +41,7 @@ app.use(passport.session());
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);
 app.use('/', caretakersRoutes);
-app.use('/', catsRoutes);
+app.use('/cats', catsRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

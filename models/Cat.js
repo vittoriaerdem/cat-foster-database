@@ -7,6 +7,9 @@ var updateSchema = new Schema({
 });
 
 var catSchema = new Schema({
+    photo: {
+        type: String,
+    },
     name: {
         type: String, 
         required: true
@@ -21,8 +24,7 @@ var catSchema = new Schema({
         required: true
     },  
     weight: {
-        type: Number, 
-        min: 0, 
+        type: String, 
         required: true
     },
     fiv: {

@@ -1,4 +1,5 @@
 var Cat = require('../models/cat');
+var Caretaker = require('../models/caretaker');
 
 module.exports = {
   index,
@@ -14,30 +15,24 @@ function index(req, res) {
 }
 
 function show(req, res) {
-  Cat.findById(req.params.id)
-    .exec(function(err, cats) {
-      res.render('cats/show', { title: 'Cat Details', cats, user:req.user});
-    });
-  };
+  {res.render('cats', { title: 'Cat Detail', cats, caretakers, user:req.user});}
+}
 
 function newCat(req, res) {
-  res.render('cats/new', { title: 'Add Cat' });
+  res.render('cats/new', { title: 'Add Cat', user:req.user });
 }
 
 function create(req, res){
-  
+  console.log(req.body);
+  var newCat = new Cat(req.body);
+  console.log(newCat);
+  newCat.save()
+  .then(result => {
+    console.log(result)
+    res.redirect('/cats')
+  })
+  .catch(err => {
+    console.error(err)
+    res.send(err)
+  }) 
 }
-
-// function create(req, res) {
-//   // convert nowShowing's checkbox of nothing or "on" to boolean
-//   req.body.nowShowing = !!req.body.nowShowing;
-//   for (let key in req.body) {
-//     if (req.body[key] === '') delete req.body[key];
-//   }
-//   var movie = new Movie(req.body);
-//   movie.save(function(err) {
-//     if (err) return res.redirect('/movies/new');
-//     // res.redirect('/movies');
-//     res.redirect(`/movies/${movie._id}`);
-//   });
-// }

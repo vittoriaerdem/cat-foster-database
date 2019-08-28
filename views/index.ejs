@@ -1,38 +1,30 @@
 <%- include('./partials/header') %>
 
-<section class="homeIntro">
-  <div class="header">
-      <img class="introPhoto" src="images/gray-cat-with-toy.jpg" alt="Cat">
-      <div class="introMessage">
-          <h1>Volunteer <span>Together we can make a difference</span></h1>
-          <p><a href="/auth/google" class="btn">Foster Now</a></p>
-      </div>
+  <div id="homeIntro">
+    <div id="introPhoto">      
+      <img src="images/gray-cat-with-toy.jpg" alt="Cat" height=500>
+    </div>
+    <div id="introMessage">
+        <h1>Volunteer <span>Together we can make a difference</span></h1>
+        <p><a href="/auth/google" class="btn">Foster Now</a></p>
+    </div>
   </div>
-</section>
 <br>
 <secion class="homeBody">
-    <h2 id="recentArrivals">Recent Arrivals:</h2>
-  <div class="bodyPhotos">
-      <div class="catImage"><img src="images/cat4_1.jpeg" alt="Cat" width=300>
-        <div class="catInfo">
-            <h2>Name</h2><h3>Age</h3>
-            <a href="cats/show" class="learnMore">Learn More</a>
-        </div>
-      </div>
-      <div class="catImage"><img src="images/cat5_1.jpg" alt="Cat" width=300>
-        <div class="catInfo">
-            <h2>Name</h2><h3>Age</h3>
-            <a href="cats/show" class="learnMore">Learn More</a>
-        </div>
-      </div>
-      <div class="catImage"><img src="images/cat6_1.jpg" alt="Cat" width=300>
-        <div class="catInfo">
-            <h2>Name</h2><h3>Age</h3>
-            <a href="cats/show" class="learnMore">Learn More</a>
-        </div>
-      </div>
-      <div>
+  <h2 id="recentArrivals">Recent Arrivals:</h2>
+    <div class="bodyPhotos">
 
+        <% cats.forEach(function(cat) { %>
+        <div class="catInfo">
+            <div class="catImage"><img src="<%= cat.photo %>" alt="Cat" width=300>
+              <div>
+                <h2><%= cat.name %></h2>
+                <h3><%= cat.age %></h3>
+                <p><a href="/cats/<%= cat._id %>">Learn More</a></p>
+              </div>
+          </div>
+              <% }); %>
+        </div>
       </div>
       <div>
           <p><a href="cats" class="btn">View All Cats</a></p>

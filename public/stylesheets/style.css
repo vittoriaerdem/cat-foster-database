@@ -23,7 +23,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  height: 120px;
+  height: 110px;
   display: flex;
   align-items: center;
   box-shadow: 0 0 25px 0 #94618E;
@@ -52,30 +52,22 @@ header li a{
   line-height: 38px;
   text-decoration: none;
   color: black;
-  margin-right: 600px;
+  margin-right: 450px;
 }
 
-.homeIntro {
-  margin: 0px;
-  padding: 0px;
+#homeIntro {
+  margin-top: 110px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 750px 1fr;
+  grid-template-rows: 500px;
 }
 
-.introPhoto {
-  width: 45%;
-  margin-top: 120px;
-  margin-left: 0;
-}
-
-.introMessage {
-  width: 55%;
-  height: 504px;
+#introMessage {
   background-color: #49274A;
-  position: absolute;
-  top: 120px;
-  right: 0;
 }
 
-.introMessage h1 {
+#introMessage h1 {
   text-transform: uppercase;
   font-size: 90px;
   font-weight: 900;
@@ -86,9 +78,9 @@ header li a{
   color: #F8EEE7;
 }
 
-.introMessage h1 span {
+#introMessage h1 span {
   font-family: 'Livvic', sans-serif;
-  font-size: 26px;
+  font-size: 25px;
   font-weight: 500;
   line-height: 70px;
   display: grid;
@@ -98,12 +90,12 @@ header li a{
 
 .btn {
   text-decoration: none;
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 500;
   color: #F8EEE7;
   border: 2px solid #f7882F;
   border-radius: 5px;
-  padding: 4px;
+  padding: 8px;
   display: block;
   text-align: center;
   max-width: 180px;
@@ -194,4 +186,9 @@ h2, h3 {
   text-align: center;
   font-size: 60px;
   margin-top: 10px;
+}
+
+
+#addCat {
+  margin-top: 200px;
 }
