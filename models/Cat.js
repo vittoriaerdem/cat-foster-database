@@ -1,7 +1,12 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var catSchema = new mongoose.Schema({
+var updateSchema = new Schema({
+    update: String, 
+    date: Date
+});
+
+var catSchema = new Schema({
     name: {
         type: String, 
         required: true
@@ -29,6 +34,8 @@ var catSchema = new mongoose.Schema({
         type: String, 
         enum: ['North Austin', 'South Austin', 'East Austin', 'West Austin'],
         required: true
-    }});
+    },
+    updates: [updateSchema]
+});
   
   module.exports = mongoose.model('Cat', catSchema);

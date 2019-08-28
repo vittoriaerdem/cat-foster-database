@@ -1,6 +1,6 @@
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth20').Strategy;
-var Foster = require('../models/caretaker');
+var Caretaker = require('../models/caretaker');
 
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
@@ -8,32 +8,32 @@ passport.use(new GoogleStrategy({
     callbackURL: process.env.GOOGLE_CALLBACK
   },
   function(accessToken, refreshToken, profile, cb) {
-    Foster.findOne({ 'googleId': profile.id }, function(err, foster) {
+    Caretaker.findOne({ 'googleId': profile.id }, function(err, caretaker) {
       if (err) return cb(err);
-      if (foster) {
-        return cb(null, foster);
+      if (caretaker) {
+        return cb(null, caretaker);
       } else {
-        // we have a new foster via OAuth!
-        var newFoster = new Foster({
+        // we have a new Caretaker via OAuth!
+        var newCaretaker = new Caretaker({
           name: profile.displayName,
           email: profile.emails[0].value,
           googleId: profile.id
         });
-        newFoster.save(function(err) {
+        newCaretaker.save(function(err) {
           if (err) return cb(err);
-          return cb(null, newFoster);
+          return cb(null, newCaretaker);
         });
       }
     });
   }
 ));
 
-passport.serializeUser(function(foster, done) {
-    done(null, foster.id);
+passport.serializeUser(function(caretaker, done) {
+    done(null, caretaker.id);
 });
 
 passport.deserializeUser(function(id, done) {
-    Foster.findById(id, function(err, foster) {
-      done(err, foster);
+    Caretaker.findById(id, function(err, caretaker) {
+      done(err, caretaker);
     });
   });

@@ -1,12 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Cat Foster Database</title>
-</head>
-<body>
-  
-</body>
-</html>
+<%- include('./partials/header') %>
+
+<section class="homeIntro">
+  <div class="header">
+      <img class="introPhoto" src="images/gray-cat-with-toy.jpg" alt="Cat">
+      <div class="introMessage">
+          <h1>Volunteer <span>Together we can make a difference</span></h1>
+          <p><a href="/auth/google" class="btn">Foster Now</a></p>
+      </div>
+  </div>
+</section>
+<br>
+<secion class="homeBody">
+    <h2 id="recentArrivals">Recent Arrivals:</h2>
+  <div class="bodyPhotos">
+      <div class="catImage"><img src="images/cat4_1.jpeg" alt="Cat" width=300>
+        <div class="catInfo">
+            <h2>Name</h2><h3>Age</h3>
+            <a href="cats/show" class="learnMore">Learn More</a>
+        </div>
+      </div>
+      <div class="catImage"><img src="images/cat5_1.jpg" alt="Cat" width=300>
+        <div class="catInfo">
+            <h2>Name</h2><h3>Age</h3>
+            <a href="cats/show" class="learnMore">Learn More</a>
+        </div>
+      </div>
+      <div class="catImage"><img src="images/cat6_1.jpg" alt="Cat" width=300>
+        <div class="catInfo">
+            <h2>Name</h2><h3>Age</h3>
+            <a href="cats/show" class="learnMore">Learn More</a>
+        </div>
+      </div>
+      <div>
+
+      </div>
+      <div>
+          <p><a href="cats" class="btn">View All Cats</a></p>
+      </div>
+
+    </div>
+</secion>
+
+<%- include('./partials/footer') %>

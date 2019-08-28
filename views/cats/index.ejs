@@ -1,11 +1,18 @@
 <%- include('../partials/header') %>
 
+<!-- THIS IS FOR ALL AVAILABLE CATS TO BE SHOWN -->
+
   <h2 id="availableFoster">Available Cats to Fosters:</h2>
-  <div class="introPhotos">
+  <div class="allCatsPhotos">
     <div class="catImage"><img src="images/cat1_1.jpeg" alt="Cat" width=300>
       <div class="catInfo">
-          <h2>Name</h2><h3>Age</h3>
-          <a href="#" class="learnMore">Learn More</a>
+          <% cats.forEach(function(m) { %>
+            <div>
+              <h2><%= m.name %></h2>
+              <h3><%= m.age %></h3>
+              <td><a href="/cats/<%= m._id %>">Learn More</a></td>
+            </tr>
+            <% }); %>
       </div>
     </div>
     <div class="catImage"><img src="images/cat2_1.jpeg" alt="Cat" width=300>

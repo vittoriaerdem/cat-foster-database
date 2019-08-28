@@ -1,9 +1,10 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var caretakerSchema = new Schema({
+var caretakersSchema = new Schema({
   name: String,
   DOB: Date,
+  born: Date,
   email: String,
   address: String,
   googleId: String
@@ -11,4 +12,4 @@ var caretakerSchema = new Schema({
   timestamps: true
 });
 
-module.exports = mongoose.model('Care Faker', caretakerSchema);
+module.exports = mongoose.model('Caretaker', caretakersSchema);
