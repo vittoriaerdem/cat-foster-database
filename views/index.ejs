@@ -13,17 +13,17 @@
 <secion class="homeBody">
   <h2 id="recentArrivals">Recent Arrivals:</h2>
     <div class="bodyPhotos">
-
         <% cats.forEach(function(cat) { %>
-        <div class="catInfo">
-            <div class="catImage"><img src="<%= cat.photo %>" alt="Cat" width=300>
-              <div>
-                <h2><%= cat.name %></h2>
-                <h3><%= cat.age %></h3>
-                <p><a href="/cats/<%= cat._id %>">Learn More</a></p>
+          <div class="catInfo">
+              <div class="catImage"><img src="<%= cat.photo %>" alt="Cat" width=300>
+                  <div>
+                    <h2><%= cat.name %></h2>
+                    <h3><%= cat.years %> years, <%= cat.months %> months</h3>
+                    <a href="/cats/<%= cat._id %>" class="learnMore">Learn More</a>
+                  </div>
               </div>
           </div>
-              <% }); %>
+          <% }); %>
         </div>
       </div>
       <div>

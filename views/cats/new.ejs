@@ -1,19 +1,20 @@
 <%- include('../partials/header') %>
 
-<!-- THIS IS FOR A NEW CAT'S INFO TO BE CREATED -->
+<section>
 
-<h2>Add a New Cat</h2>
+    <h2 id="addCatHeader">Add A Cat:</h2>
   <form id="addCat" action="/cats" method="POST">
-    <label>Photo:
-        <input type="text" name="photo">
-    </label>
     <label>Name:
       <input type="text" name="name">
     </label>
     <br>
-    <label>Age:
-      <input type="text" name="age">
+    <label>Years:
+      <input type="text" name="years">
     </label>
+    <br>
+    <label>Months:
+        <input type="text" name="months">
+      </label>
     <br>
     <label>Sex:
       <select name="sex">
@@ -41,7 +42,13 @@
       <option value="West Austin">West Austin</option>
       </select>
     </label>
-      <input type="submit" value="Add Cat">
+    <br>
+    <label>Photo:
+        <input type="text" name="photo">
+    </label>
+    <br>
+      <input type="submit" class"add" value="Add Cat">
   </form>
 
+</section>
 <%- include('../partials/footer') %>

@@ -14,7 +14,11 @@ var catSchema = new Schema({
         type: String, 
         required: true
     },
-    age: {
+    years: {
+        type: String, 
+        required: true
+    },
+    months: {
         type: String, 
         required: true
     },
