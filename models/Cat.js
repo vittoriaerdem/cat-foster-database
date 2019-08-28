@@ -1,35 +1,34 @@
 var mongoose = require('mongoose');
-
+var Schema = mongoose.Schema;
 
 var catSchema = new mongoose.Schema({
     name: {
         type: String, 
-        required: true, 
+        required: true
     },
     age: {
-        type: Number, 
-        min: 0, 
-        required: true, 
+        type: String, 
+        required: true
     },
     sex: {
         type: String, 
-        enum: ['male', 'female'],
-        required: true, 
+        enum: ['Male', 'Female'],
+        required: true
     },  
     weight: {
         type: Number, 
         min: 0, 
-        required: true, 
+        required: true
     },
     fiv: {
         type: String, 
-        enum: ['yes, positive', 'no, negative'],
-        required: true, 
+        enum: ['Yes, Positive', 'No, Negative'],
+        required: true
     },
     location: {
         type: String, 
         enum: ['North Austin', 'South Austin', 'East Austin', 'West Austin'],
-        required: true, 
+        required: true
     }});
   
   module.exports = mongoose.model('Cat', catSchema);

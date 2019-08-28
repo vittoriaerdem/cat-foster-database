@@ -16,8 +16,8 @@ router.get('/', function(req, res) {
  router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect : '/cats',
-    failureRedirect : '/cats'
+    successRedirect : '/foster',
+    failureRedirect : '/foster'
   }
 ));
 
