@@ -3,9 +3,12 @@ var Schema = mongoose.Schema;
 
 var caretakersSchema = new Schema({
   name: String,
-  DOB: Date,
-  email: String,
+  dob: Date,
   address: String,
+  email: String,
+  dogs: String,
+  cats: String,
+  photo: String,
   googleId: String
 }, {
   timestamps: true

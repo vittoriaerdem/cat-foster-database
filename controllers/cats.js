@@ -4,7 +4,8 @@ module.exports = {
   index,
   show,
   new: newCat,
-  create
+  create,
+  delete: deleteCat,
 };
 
 function index(req, res) {
@@ -20,6 +21,13 @@ function show(req, res) {
 
 function newCat(req, res) {
   res.render('cats/new', { title: 'Add Cat', user:req.user });
+}
+
+function deleteCat(req, res) {
+  Cat.findByIdAndRemove(req.params.id, function(err){
+  Cat.remove();
+  });
+  res.redirect('/cats');
 }
 
 function create(req, res){

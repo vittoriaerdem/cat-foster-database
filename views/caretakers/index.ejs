@@ -1,6 +1,22 @@
 
 <%- include('../partials/header') %>
 
-<!-- THIS IS FOR A CARETAKER'S PROFILE -->
+<h2 id="profileHeader">Your Profile:</h2>
+
+<div class = yourProfile>
+    
+      <div class="caretakerProfile"><img src="<%= caretaker.photo %>" alt="Caretakers Profile Pic" width=350></div>
+          <div>
+            
+            <h3>Name: <%= caretaker.name %></h3>
+            <h3>DOB: <%= caretaker.dob %></h3>
+            <h3>Address: <%= caretaker.address %></h3>
+            <h3>Email: <%= caretaker.email %></h3>
+            <h3>Dogs: <%= caretaker.dogs %></h3>
+            <h3>Cats: <%= caretaker.cats %></h3>
+          </div>
+        
+    </div>
+</div>
 
 <%- include('../partials/footer') %>

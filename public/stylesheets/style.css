@@ -45,7 +45,7 @@ header li a {
   line-height: 30px;
   text-decoration: none;
   color: black;
-  margin-right: 400px;
+  margin-right: 900px;
 }
 
 #homeIntro {
@@ -117,7 +117,7 @@ table, td{
   justify-content: center;
 }
 
-#availableFoster, #addCatHeader, #CatNameHeader {
+#availableFoster, #addCatHeader, #CatNameHeader, #caretakerProfile, #profileHeader{
   text-align: center;
   font-size: 60px;
   margin-top: 140px;
@@ -197,10 +197,10 @@ input {
   height: 28px;
 }
 
-#newCatForm {
+#newCatForm, #newCaretakerForm {
   display: inline-block;
   text-align: left;
-  margin-left: 425px;
+  margin-left: 650px;
 }
 
 .catHistory{
@@ -243,4 +243,8 @@ input {
   display: inline-block;
   justify-items: center;
   text-align: center;
+}
+
+.yourProfile {
+text-align: center;
 }

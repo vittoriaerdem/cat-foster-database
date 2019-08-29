@@ -5,6 +5,7 @@ var logger = require('morgan');
 var session = require('express-session');
 var passport = require('passport');
 var cookieParser = require('cookie-parser');
+var methodOverride = require('method-override');
 
 // load the env vars
 require('dotenv').config();
@@ -37,6 +38,7 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(methodOverride('_method'));
 
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);

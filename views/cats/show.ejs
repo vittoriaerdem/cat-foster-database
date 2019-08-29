@@ -29,7 +29,7 @@
 
       <div>
         <h2>Interested in <%= cats.name %>? </h2>
-        <p><a href="/caretakers/index" class="btn">Send My Profile</a></p>
+        <p><a href="/caretakers/new" class="btn">Send My Profile</a></p>
       </div>
 
       <div class="catHistoryInfo">
@@ -37,9 +37,10 @@
         <h3><%= cats.update %></h3>
       </div>
 
-      <!-- <div>
-        <h2>Google Maps</h2>
-      </div> -->
+      <div>
+      <form action="index/<%= cats._id %>?_method=DELETE" method="POST" class="delete-form">
+        <button type="submit" class="">X</button></form>
+      </div>
 
     </div>
   </div>
