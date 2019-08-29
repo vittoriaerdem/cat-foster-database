@@ -29,7 +29,7 @@ router.get('/', function(req, res) {
  // OAuth logout route
  router.get('/logout', function(req, res){
   req.logout();
-  res.redirect('/caregivers');
+  res.redirect('/caretakers');
 });
 
 module.exports = router;

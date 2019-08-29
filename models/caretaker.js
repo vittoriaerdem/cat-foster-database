@@ -4,7 +4,6 @@ var Schema = mongoose.Schema;
 var caretakersSchema = new Schema({
   name: String,
   DOB: Date,
-  born: Date,
   email: String,
   address: String,
   googleId: String

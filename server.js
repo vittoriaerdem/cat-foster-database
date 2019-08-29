@@ -18,8 +18,8 @@ require('./config/passport');
 
 // require our routes
 var indexRoutes = require('./routes/index');
-var caretakersRoutes = require('./routes/caretakers');
 var catsRoutes = require('./routes/cats')
+var caretakersRoutes = require('./routes/caretakers');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -40,8 +40,8 @@ app.use(passport.session());
 
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);
-app.use('/', caretakersRoutes);
 app.use('/cats', catsRoutes);
+app.use('/caretakers', caretakersRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

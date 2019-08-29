@@ -1,38 +1,23 @@
 var Caretaker = require('../models/caretaker');
 
 module.exports = {
-  new: newCaretaker,
-  // create,
   index, 
-  show
+  show,
+  new: newCaretaker,
+    // create,
   // addToFoster
 };
 
-// function addToFoster(req, res) {
-//   Cat.findById(req.params.id, function (err, cat) {
-//     cat.cast.push(req.body.caretakerId);
-//     cat.save(function (err) {
-//       res.redirect(`/cats/${cat._id}`);
-//     });
-//   });
-// }
-
 function index(req, res) {
   Caretaker.find({}, function(err, caretakers) {
-    res.render('/caretakers', { title: 'Caretaker Profile', caretakers});
+    res.render('caretakers/index', { title: 'Caretaker Profile', caretakers, user:req.user});
   });
 }
 
 function show(req, res) {
-  Caretaker.findById(req.params.id)
-    .exec(function(err, caretakers) {
-      console.log(caretakers);
-      res.render('caretakers/show', {
-        title: 'Caretakers Details', caretakers
-      });
-    });
-  };
-
+  Caretaker.findById(req.params.id, function(err, caretakers) {
+    res.render('caretakers/show', { title: 'Caretakers Details', caretakers, user:req.user});}
+  )}
 
 
 function newCaretaker(req, res) {
@@ -43,3 +28,13 @@ function newCaretaker(req, res) {
     });
   })
 }
+
+
+// function addToFoster(req, res) {
+//   Cat.findById(req.params.id, function (err, cat) {
+//     cat.cast.push(req.body.caretakerId);
+//     cat.save(function (err) {
+//       res.redirect(`/cats/${cat._id}`);
+//     });
+//   });
+// }
