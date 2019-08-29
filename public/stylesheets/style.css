@@ -1,10 +1,3 @@
-/* colors:
-light purple - #94618E
-dark purple - #49274A
-dark tan - #f4decb
-light tan -  #F8EEE7
-*/
-
 body {
   background-color: #F8EEE7;
   background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
@@ -158,7 +151,6 @@ h2, h3 {
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 1.1px;
-  /* line-height: 35px; */
 }
 
 .fourohfour, .fourohfour h1, .fourohfour h2{
@@ -235,7 +227,3 @@ input {
 .catAddInfo {
   text-align:left;
 }
-.CatInfo {
-}
-
-

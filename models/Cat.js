@@ -7,9 +7,6 @@ var updateSchema = new Schema({
 });
 
 var catSchema = new Schema({
-    photo: {
-        type: String,
-    },
     name: {
         type: String, 
         required: true
@@ -27,6 +24,10 @@ var catSchema = new Schema({
         enum: ['Male', 'Female'],
         required: true
     },  
+    bio: {
+        type: String, 
+        required: true
+    }, 
     weight: {
         type: String, 
         required: true
@@ -36,10 +37,39 @@ var catSchema = new Schema({
         enum: ['Yes, Positive', 'No, Negative'],
         required: true
     },
+    felv: {
+        type: String, 
+        enum: ['Yes, Positive', 'No, Negative'],
+        required: true
+    },
     location: {
         type: String, 
         enum: ['North Austin', 'South Austin', 'East Austin', 'West Austin'],
         required: true
+    },
+    dog: {
+        type: String, 
+        enum: ['Yes', 'No'],
+        required: true
+    }, 
+    cat: {
+        type: String, 
+        enum: ['Yes', 'No'],
+        required: true
+    }, 
+    kid: {
+        type: String, 
+        enum: ['Yes', 'No'],
+        required: true
+    }, 
+    photoOne: {
+        type: String,
+    },
+    photoTwo: {
+        type: String,
+    },
+    photoThree: {
+        type: String,
     },
     updates: [updateSchema]
 });

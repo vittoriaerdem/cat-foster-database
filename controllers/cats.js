@@ -14,8 +14,8 @@ function index(req, res) {
 }
 
 function show(req, res) {
-  Cat.findById(req.params.id, function(err, cats)
-  {res.render('cats/show', { title: 'Cat Detail', cats, user:req.user});}
+  Cat.findById(req.params.id, function(err, cats) {
+    res.render('cats/show', { title: 'One Cat', cats, user:req.user});}
   )}
 
 function newCat(req, res) {

@@ -7,18 +7,18 @@
     <form class="pure-form pure-form-aligned" action="/cats" method="POST">
         <fieldset>
             <div class="pure-control-group">
-                <label for="name">Cat's name:</label>
+                <label for="name">Cat's name</label>
                 <input name="name" type="text" placeholder="Name" autocomplete="off">
             </div>
 
             <div class="pure-control-group">
-                <label for="age">Age:</label>
+                <label for="age">Age</label>
                 <input name="years" type="text" placeholder="Years" autocomplete="off">
                 <input name="months" type="text" placeholder="Months" autocomplete="off">
             </div>
 
             <div class="pure-control-group">
-                <label for="sex">Sex:</label>
+                <label for="sex">Sex</label>
                 <select name="sex">
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
@@ -26,12 +26,17 @@
             </div>
 
             <div class="pure-control-group">
-                <label for="weight">Weight:</label>
+                    <label for="bio">Cat's Bio</label>
+                    <input name="bio" type="text" placeholder="Small Biography" autocomplete="off">
+                </div>
+
+            <div class="pure-control-group">
+                <label for="weight">Weight</label>
                 <input name="weight" type="text" placeholder="Weight" autocomplete="off">
             </div>
 
             <div class="pure-control-group">
-                <label for="fiv">FIV +:</label>
+                <label for="fiv">FIV +</label>
                 <select name="fiv">
                     <option value="Yes, Positive">Yes, Positive</option>
                     <option value="No, Negative">No, Negative</option>
@@ -39,7 +44,15 @@
             </div>
 
             <div class="pure-control-group">
-                <label for="location">Location:</label>
+                    <label for="felv">FeLV +</label>
+                    <select name="felv">
+                        <option value="Yes, Positive">Yes, Positive</option>
+                        <option value="No, Negative">No, Negative</option>
+                    </select>
+                </div>
+
+            <div class="pure-control-group">
+                <label for="location">Location</label>
                 <select name="location">
                     <option value="North Austin">North Austin</option>
                     <option value="South Austin">South Austin</option>
@@ -49,9 +62,54 @@
             </div>
 
             <div class="pure-control-group">
-                <label for="photo">Photo Link:</label>
-                <input name="photo" type="text" placeholder="Photo" autocomplete="off">
+                    <label for="dog">Good with dogs?</label>
+                    <select name="dog">
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                      <option value="No">Unknown</option>
+                    </select>
+                </div>
+
+            <div class="pure-control-group">
+                    <label for="cat">Good with cats?</label>
+                    <select name="cat">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="No">Unknown</option>
+                    </select>
+                </div>
+
+            <div class="pure-control-group">
+                    <label for="kid">Good with kids?</label>
+                    <select name="kid">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="No">Unknown</option>
+                    </select>
+                </div>
+        
+            <div class="pure-control-group">
+                    <label for="rx">Long-Term Medicine?</label>
+                    <select name="rx">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+
+            <div class="pure-control-group">
+                <label for="photoOne">Photo Link 1</label>
+                <input name="photoOne" type="text" placeholder="Photo" autocomplete="off">
             </div>
+
+            <div class="pure-control-group">
+                    <label for="photoTwo">Photo Link 2</label>
+                    <input name="photoTwo" type="text" placeholder="Photo" autocomplete="off">
+                </div>
+
+            <div class="pure-control-group">
+                    <label for="photoThree">Photo Link 3</label>
+                    <input name="photoThree" type="text" placeholder="Photo" autocomplete="off">
+                </div>
     
             <div class="pure-controls">
                 <label for="cb" class="pure-checkbox">

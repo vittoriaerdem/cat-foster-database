@@ -2,52 +2,51 @@
 
 <!-- THIS IS FOR A SPECIFIC CAT'S INFO TO BE SHOWN -->
 
-<h2 id="CatNameHeader">cat name</h2>
+<div class = catHistory>
+    <% cats.forEach(function(cat) { %>
+    <div class="catGallery">
+      <div class="catImage"><img src="<%= cat.photoOne %>" alt="Cat Profile Pic 1" width=300>
+      <div class="catImage"><img src="<%= cat.photoTwo %>" alt="Cat Profile Pic 2" width=300>
+      <div class="catImage"><img src="<%= cat.photoThree %>" alt="Cat Profile Pic 3" width=300>
+    </div>
 
-<div class="catInfoGallery">
-  <div class="catIdPhoto"><img src="../public/images/India_1.jpeg" alt="Cat" width=300>
-  <div class="catIdPhoto"><img src="../public/images/India_2.jpeg" alt="Cat" width=300>
-  <div class="catIdPhoto"><img src="../public/images/India_3.jpeg" alt="Cat" width=300>
-</div>
+    <div class="catIdInfo">
+      <div class="catAddInfo">
+        <h2>Additional Info: </h2>
+        <h3>Good with Dogs? <%= cat.dog %></h3>
+        <h3>Good with Cats? <%= cat.cat %></h3>
+        <h3>Good with Kids? <%= cat.kid %></h3>
+        <h3>Current Weight? <%= cat.weight %></h3>
+        <h3>Long-Term Meds? <%= cat.rx %></h3>
+      </div>
 
-<div class="catIdInfo">
-  <div class="catAddInfo">
-    <h2> Additional Info: </h2>
-    <div>Good with Dogs?</div>
-    <p>Good with Cats?</p>
-    <p>Good with Kids?</p>
-    <p>Current Weight</p>
-    <p>Long-Term Meds?</p>
+      <div class="CatInfo">
+        <h2><%= cat.name %></h2>
+        <h3><%= cat.years %> years, <%= cat.months %> months</h3>
+        <p><%= cat.bio %></p>
+      </div>
+
+      <div class="catLocalInfo">
+        <h2>My Pickup Location: </h2>
+        <h3><%= cat.location %></h3>
+      </div>
+
+      <div>
+        <h2>Interested in <%= cat.name %>? </h2>
+        <p><a href="caregivers" class="btn">Send My Profile</a></p>
+      </div>
+
+      <div class="catHistoryInfo">
+        <h2>History</h2>
+        <h3><%= cat.update %></h3>
+      </div>
+
+      <div>
+        <h2>Google Maps</h2>
+      </div>
+
+    </div>
+    <% }); %>
   </div>
-
-  <div class="CatInfo">
-    <h2>Name</h2>
-    <p>Age</p>
-    <p>Blurb</p>
-  </div>
-
-  <div class="catLocalInfo">
-      <h2> My Pickup Location: </h2>
-      <p> Address</p>
-  </div>
-
-  <div>
-      <h2> Interested in Name? </h2>
-      <p><a href="caregivers" class="btn">Send My Profile</a></p>
-  </div>
-
-  <div class="catHistoryInfo">
-    <h2> History </h2>
-    <p> Date, Blurb</p>
-    <p> Date, Blurb</p>
-    <p> Date, Blurb</p>
-    <p> Date, Blurb</p>
-    <p> Date, Blurb</p>
-  </div>
-
-  <div>
-      <h2> Google Maps </h2>
-  </div>
-
-</div>
+  
   <%- include('../partials/footer') %>
