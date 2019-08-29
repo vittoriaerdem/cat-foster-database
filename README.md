@@ -15,6 +15,8 @@
 
 ![cat-foster-database-available-cats](./images/available-cats.png)
 
+![cat-foster-database-available-cats-details](./images/available-cats-details.png)
+
 ### **User Stories:**
 As a visitor
 * I want to view available cats 
@@ -24,15 +26,17 @@ As a registered foster
 * I want to send my profile when I find a cat I'm interested in fostering
 
 ### **Features List:**
-* TBD
+* Create - Cats can be added to the foster database.
+* Read - Cat's profiles and details can be reviewed. 
+* Delete - Cat's profile can be deleted, if needed. 
 
 ### **Stretch Goals:**
-* Import -  Create individual foster guides with updated database info after a foster is approved. 
+* Import -  Create individual cat care sheets with updated database info and foster's profile.
+* Google Maps - Show real map locations with clickable links. 
 * Expansion - Add Dogs to the database
 
 
 ### **Psuedocode:**
-
 * Create a front page with sign-in and sign-up links
 * Use Google Auth to log in to account
 * Redirect signed in user to Available Cats page
