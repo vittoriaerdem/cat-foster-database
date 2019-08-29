@@ -124,7 +124,7 @@ table, td{
   justify-content: center;
 }
 
-#availableFoster, #addCatHeader {
+#availableFoster, #addCatHeader, #CatNameHeader {
   text-align: center;
   font-size: 60px;
   margin-top: 140px;
@@ -206,5 +206,36 @@ input {
 }
 
 #newCatForm {
-  margin: 1000px;
+  display: inline-block;
+  text-align: left;
+  margin-left: 425px;
 }
+
+.catInfoGallery {
+  display: grid;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.catIdInfo {
+  display: grid;
+  grid-template-columns: 300px 450px 300px;
+  grid-template-rows: 250px 300px;
+  justify-content: center;
+}
+
+.catIdInfo h2 {
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.catAddInfo {
+  text-align:left;
+}
+.CatInfo {
+}
+
+

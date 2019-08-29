@@ -2,33 +2,52 @@
 
 <!-- THIS IS FOR A SPECIFIC CAT'S INFO TO BE SHOWN -->
 
-<section id="show-page">
-    <div>Name: </div>
-    <div><%= cat.name %></div>
-    <div>Age: </div>
-    <div><%= cat.age %></div>
-    <div>Sex: </div>
-    <div><%= cat.sex %></div>
-    <div>Weight: </div>
-    <div><%= cat.weight %></div>
-    <div>FIV +: </div>
-    <div><%= cat.fiv %></div>
-    <div>Location: </div>
-    <div><%= cat.location %></div>
-    <div>Location: </div>
-    <div>East Austin</div>
-  </section>
+<h2 id="CatNameHeader">cat name</h2>
 
-  <!-- <br><br><h2>Updates</h2>
-<form id="add-review-form" method="POST"
-  action="/movies/<%= movie._id %>/reviews">
-  <label>Review:</label>
-  <textarea name="content"></textarea>
-  <label>Date:</label>
-  <select name="rating">
+<div class="catInfoGallery">
+  <div class="catIdPhoto"><img src="../public/images/India_1.jpeg" alt="Cat" width=300>
+  <div class="catIdPhoto"><img src="../public/images/India_2.jpeg" alt="Cat" width=300>
+  <div class="catIdPhoto"><img src="../public/images/India_3.jpeg" alt="Cat" width=300>
+</div>
 
-  </select>
-  <input type="submit" value="Add Review">
-</form> -->
+<div class="catIdInfo">
+  <div class="catAddInfo">
+    <h2> Additional Info: </h2>
+    <div>Good with Dogs?</div>
+    <p>Good with Cats?</p>
+    <p>Good with Kids?</p>
+    <p>Current Weight</p>
+    <p>Long-Term Meds?</p>
+  </div>
 
+  <div class="CatInfo">
+    <h2>Name</h2>
+    <p>Age</p>
+    <p>Blurb</p>
+  </div>
+
+  <div class="catLocalInfo">
+      <h2> My Pickup Location: </h2>
+      <p> Address</p>
+  </div>
+
+  <div>
+      <h2> Interested in Name? </h2>
+      <p><a href="caregivers" class="btn">Send My Profile</a></p>
+  </div>
+
+  <div class="catHistoryInfo">
+    <h2> History </h2>
+    <p> Date, Blurb</p>
+    <p> Date, Blurb</p>
+    <p> Date, Blurb</p>
+    <p> Date, Blurb</p>
+    <p> Date, Blurb</p>
+  </div>
+
+  <div>
+      <h2> Google Maps </h2>
+  </div>
+
+</div>
   <%- include('../partials/footer') %>

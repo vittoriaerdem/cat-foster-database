@@ -1,5 +1,4 @@
 var Cat = require('../models/cat');
-var Caretaker = require('../models/caretaker');
 
 module.exports = {
   index,
@@ -15,8 +14,9 @@ function index(req, res) {
 }
 
 function show(req, res) {
-  {res.render('cats', { title: 'Cat Detail', cats, caretakers, user:req.user});}
-}
+  Cat.findById(req.params.id, function(err, cats)
+  {res.render('cats/show', { title: 'Cat Detail', cats, user:req.user});}
+  )}
 
 function newCat(req, res) {
   res.render('cats/new', { title: 'Add Cat', user:req.user });
