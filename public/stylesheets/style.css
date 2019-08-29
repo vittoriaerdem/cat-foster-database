@@ -45,7 +45,7 @@ header li a {
   line-height: 30px;
   text-decoration: none;
   color: black;
-  margin-right: 900px;
+  margin-right: 500px;
 }
 
 #homeIntro {
@@ -224,10 +224,19 @@ input {
   font-size: 30px;
 }
 
+.CatInfo h4 {
+  text-align: left;
+  font-size: 16px;
+}
+
+.catAddInfo h2, .catLocalInfo h2, .catHistoryInfo h2{
+  text-decoration: underline;
+}
+
 .catAddInfo h3{
   text-align:left;
   display: grid;
-  line-height: 20px;
+  line-height: 10px;
 }
 
 .catGallery {
@@ -247,4 +256,38 @@ input {
 
 .yourProfile {
 text-align: center;
+}
+
+.delete h2{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.deleteCat {
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 500;
+  color: #F8EEE7;
+  border: 2px solid #49274A;
+  border-radius: 5px;
+  padding: 8px;
+  display: block;
+  text-align: center;
+  max-width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #49274A;
+}
+
+.catLocalInfo h2 {
+  text-align: center;
+}
+
+.catLocalInfo h3 {
+  text-align: center;
+  line-height: 5px;
+}
+
+.catHistoryInfo h3 {
+  line-height: 10px;
 }

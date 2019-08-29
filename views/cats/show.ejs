@@ -19,12 +19,14 @@
       <div class="CatInfo">
         <h2><%= cats.name %></h2>
         <h3><%= cats.years %> years, <%= cats.months %> months</h3>
-        <p><%= cats.bio %></p>
+        <h4><%= cats.bio %></h4>
       </div>
 
       <div class="catLocalInfo">
         <h2>My Pickup Location: </h2>
-        <h3><%= cats.location %></h3>
+        <h3><%= cats.location %> Center</h3>
+        <h3>1234 Our Community Dr.</h3>
+        <h3>Austin, TX 78705</h3>
       </div>
 
       <div>
@@ -34,12 +36,15 @@
 
       <div class="catHistoryInfo">
         <h2>History</h2>
-        <h3><%= cats.update %></h3>
+        <h3>8/16/2019 - Recieved heartworm treatment </h3>
+        <h3>8/16/2019 - Recieved flea treatment </h3>
+        <h3>8/15/2019 - Arrived at Our Community </h3>
       </div>
 
-      <div>
+      <div class="delete">
+        <h2>Cat Adopted?</h2>
       <form action="index/<%= cats._id %>?_method=DELETE" method="POST" class="delete-form">
-        <button type="submit" class="">X</button></form>
+        <button type="submit" class="deleteCat">Remove</button></form>
       </div>
 
     </div>
