@@ -8,13 +8,13 @@ light tan -  #F8EEE7
 body {
   background-color: #F8EEE7;
   background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
-  margin: 0;
   font-family: 'Livvic', sans-serif;
 }
 
 header img {
   height: 85px;
-  margin-left: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 header {
@@ -36,10 +36,10 @@ header * {
 header li {
   margin: 20px;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 25px;
 }
 
-header li a{
+header li a {
   color: black;
   text-decoration: none;
 }
@@ -47,12 +47,12 @@ header li a{
 .our-community-logo {
   float: left;
   font-weight: 600;
-  font-size: 4vh;
+  font-size: 35px;
   text-align: center;
-  line-height: 38px;
+  line-height: 30px;
   text-decoration: none;
   color: black;
-  margin-right: 450px;
+  margin-right: 400px;
 }
 
 #homeIntro {
@@ -99,7 +99,8 @@ header li a{
   display: block;
   text-align: center;
   max-width: 180px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #f7882F;
 }
 
@@ -157,7 +158,7 @@ h2, h3 {
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 1.1px;
-  line-height: 35px;
+  /* line-height: 35px; */
 }
 
 .fourohfour, .fourohfour h1, .fourohfour h2{
@@ -180,7 +181,7 @@ h2, h3 {
   grid-template-rows: 400px;
   grid-gap: 50px;
   justify-content: center;
-  margin-bottom: 130px;
+  margin-bottom: 40px;
 }
 
 #recentArrivals {
@@ -202,4 +203,8 @@ label {
 
 input {
   height: 28px;
+}
+
+#newCatForm {
+  margin: 1000px;
 }

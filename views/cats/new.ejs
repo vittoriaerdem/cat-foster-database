@@ -1,54 +1,67 @@
 <%- include('../partials/header') %>
 
 <section>
-
     <h2 id="addCatHeader">Add A Cat:</h2>
-  <form id="addCat" action="/cats" method="POST">
-    <label>Name:
-      <input type="text" name="name">
-    </label>
-    <br>
-    <label>Years:
-      <input type="text" name="years">
-    </label>
-    <br>
-    <label>Months:
-        <input type="text" name="months">
-      </label>
-    <br>
-    <label>Sex:
-      <select name="sex">
-      <option value="Male">Male</option>
-      <option value="Female">Female</option>
-      </select>
-    </label>
-    <br>
-    <label>Weight
-      <input type="text" name="weight">
-    </label>
-    <br>
-    <label>FIV +:
-      <select name="fiv">
-      <option value="Yes, Positive">Yes, Positive</option>
-      <option value="No, Negative">No, Negative</option>
-      </select>
-    </label>
-    <br>
-    <label>Location:
-      <select name="location">
-      <option value="North Austin">North Austin</option>
-      <option value="South Austin">South Austin</option>
-      <option value="East Austin">East Austin</option>
-      <option value="West Austin">West Austin</option>
-      </select>
-    </label>
-    <br>
-    <label>Photo:
-        <input type="text" name="photo">
-    </label>
-    <br>
-      <input type="submit" class"add" value="Add Cat">
-  </form>
+    <form class="pure-form pure-form-aligned" action="/cats" method="POST">
+        <fieldset>
+            <div class="pure-control-group">
+                <label for="name">Cat's name:</label>
+                <input name="name" type="text" placeholder="Name" autocomplete="off">
+            </div>
+
+            <div class="pure-control-group">
+                <label for="age">Age:</label>
+                <input name="years" type="text" placeholder="Years" autocomplete="off">
+                <input name="months" type="text" placeholder="Months" autocomplete="off">
+            </div>
+
+            <div class="pure-control-group">
+                <label for="sex">Sex:</label>
+                <select name="sex">
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+            </div>
+
+            <div class="pure-control-group">
+                <label for="weight">Weight:</label>
+                <input name="weight" type="text" placeholder="Weight" autocomplete="off">
+            </div>
+
+            <div class="pure-control-group">
+                <label for="fiv">FIV +:</label>
+                <select name="fiv">
+                    <option value="Yes, Positive">Yes, Positive</option>
+                    <option value="No, Negative">No, Negative</option>
+                </select>
+            </div>
+
+            <div class="pure-control-group">
+                <label for="location">Location:</label>
+                <select name="location">
+                    <option value="North Austin">North Austin</option>
+                    <option value="South Austin">South Austin</option>
+                    <option value="East Austin">East Austin</option>
+                    <option value="West Austin">West Austin</option>
+                </select>
+            </div>
+
+            <div class="pure-control-group">
+                <label for="photo">Photo Link:</label>
+                <input name="photo" type="text" placeholder="Photo" autocomplete="off">
+            </div>
+    
+            <div class="pure-controls">
+                <label for="cb" class="pure-checkbox">
+                    <input id="cb" type="checkbox"> This cat is ready for the foster program
+                </label>
+    
+                <button type="submit" class="pure-button pure-button-primary">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+
+
 
 </section>
 <%- include('../partials/footer') %>
