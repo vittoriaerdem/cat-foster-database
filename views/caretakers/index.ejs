@@ -5,18 +5,25 @@
 
 <div class = yourProfile>
     
-      <div class="caretakerProfile"><img src="<%= caretaker.photo %>" alt="Caretakers Profile Pic" width=350></div>
-          <div>
-            
-            <h3>Name: <%= caretaker.name %></h3>
-            <h3>DOB: <%= caretaker.dob %></h3>
-            <h3>Address: <%= caretaker.address %></h3>
-            <h3>Email: <%= caretaker.email %></h3>
-            <h3>Dogs: <%= caretaker.dogs %></h3>
-            <h3>Cats: <%= caretaker.cats %></h3>
-          </div>
-        
-    </div>
-</div>
+      <div class="caretakerProfile"><img src="https://imgur.com/ns1Lq5z.jpg" alt="Caretakers Profile Pic" width=150></div>
+      <div>
+          <h3>Name :<%= caretaker.name %></h3>
+          <h3>DOB :<%= caretaker.dob %></h3>
+          <h3>Address :<%= caretaker.address %></h3>
+          <h3>Email :<%= caretaker.email %></h3>
+          <h3>Dogs :<%= caretaker.dogs %></h3>
+          <h3>Cats :<%= caretaker.cats %></h3>
+        </div>
 
+      <div>
+        <h3>Vittoria Erdem<%= caretaker.name %></h3>
+        <h3>10/14/1991<%= caretaker.dob %></h3>
+        <h3>1234 Guadalupe St., Austin, TX 78753<%= caretaker.address %></h3>
+        <h3>vittoriaerdem@email.com<%= caretaker.email %></h3>
+        <h3>0<%= caretaker.dogs %></h3>
+        <h3>0<%= caretaker.cats %></h3>
+      </div>
+     
+</div>
+<p><a href="#" class="btn">Update My Profile</a></p>
 <%- include('../partials/footer') %>

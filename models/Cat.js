@@ -62,6 +62,11 @@ var catSchema = new Schema({
         enum: ['Yes', 'No'],
         required: true
     }, 
+    rx: {
+        type: String, 
+        enum: ['Yes', 'No'],
+        required: true
+    }, 
     photoOne: {
         type: String,
     },

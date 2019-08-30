@@ -200,7 +200,7 @@ input {
 #newCatForm, #newCaretakerForm {
   display: inline-block;
   text-align: left;
-  margin-left: 650px;
+  margin-left: 425px;
 }
 
 .catHistory{
@@ -246,7 +246,7 @@ input {
 
 .catProfile {
   margin-top: 150px;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
   margin-left: 20px;
   margin-right: 20px;
   display: inline-block;
@@ -255,7 +255,10 @@ input {
 }
 
 .yourProfile {
-text-align: center;
+  display: grid;
+  grid-template-columns: 200px 110px 500px;
+  grid-template-rows: 300px;
+  justify-content: center;
 }
 
 .delete h2{
@@ -291,3 +294,5 @@ text-align: center;
 .catHistoryInfo h3 {
   line-height: 10px;
 }
+
+
