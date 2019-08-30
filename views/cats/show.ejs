@@ -17,29 +17,69 @@
       </div>
 
       <div class="CatInfo">
-        <h2><%= cats.name %></h2>
+        <h2 class="catShow"><%= cats.name %></h2>
         <h3><%= cats.years %> years, <%= cats.months %> months</h3>
         <h4><%= cats.bio %></h4>
       </div>
 
       <div class="catLocalInfo">
-        <h2>My Pickup Location: </h2>
+        <h2 class="catShow">My Pickup Location: </h2>
         <h3><%= cats.location %> Center</h3>
         <h3>1234 Our Community Dr.</h3>
         <h3>Austin, TX 78705</h3>
       </div>
 
       <div>
-        <h2>Interested in <%= cats.name %>? </h2>
+        <h2 class="catShow">Interested in <%= cats.name %>? </h2>
         <p><a href="/caretakers/new" class="btn">Send My Profile</a></p>
       </div>
 
       <div class="catHistoryInfo">
-        <h2>History</h2>
+          <% if (cat.updates.length) { %>
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Update</th>
+                  <th>Rating</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% var total = 0 %>
+                <% cat.updates.forEach(function(cat) { %>
+                  <% total += cat.rating %>
+                  <tr></tr>
+                    <td><%= r.createdAt.toLocaleDateString() %></td>
+                    <td><%= r.content %></td>
+                    <td><%= r.rating %></td>
+                  </tr>
+                  <% }); %>
+                  <tr>
+                    <td colspan="2"></td>
+                    <td><strong><%= (total / cat.updates.length).toFixed(1) %></strong></td>
+                  </tr>
+              </tbody>
+            </table>
+          <% } else { %>
+            <h5>No Updates Yet</h5>
+          <% } %>
+          
+
+        <h2 class="catShow">History</h2>
         <h3>8/16/2019 - Recieved heartworm treatment </h3>
         <h3>8/16/2019 - Recieved flea treatment </h3>
         <h3>8/15/2019 - Arrived at Our Community </h3>
-      </div>
+        <hr>
+        <div class="pure-control-group">
+
+        <br><br><h2>Updates</h2>
+        <form id="updateCatHistory" method="POST" action="/cats/<%= cat._id %>/updates">
+          <label>Update:</label>
+          <textarea name="content"></textarea>
+          <input type="submit" value="Add Update">
+        </form>
+
+        </div>
 
       <div class="delete">
         <h2>Cat Adopted?</h2>

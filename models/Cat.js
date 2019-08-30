@@ -2,8 +2,8 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var updateSchema = new Schema({
-    update: String, 
-    date: Date
+    date: Date,
+    update: String
 });
 
 var catSchema = new Schema({

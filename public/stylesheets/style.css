@@ -155,6 +155,8 @@ h2, h3 {
 
 .fourohfour, .fourohfour h1, .fourohfour h2{
   text-align: center;
+  display: block;
+
 }
 
 .fourohfour h1 {
@@ -164,6 +166,11 @@ h2, h3 {
 
 .fourohfour h2 {
   font-size: 40px;
+}
+
+.fourohfour div {
+  display: flex;
+  justify-content: center;
 }
 
 .bodyPhotos {
@@ -268,10 +275,10 @@ input {
 
 .deleteCat {
   text-decoration: none;
-  font-size: 28px;
+  font-size: 14px;
   font-weight: 500;
   color: #F8EEE7;
-  border: 2px solid #49274A;
+  border: 1px solid darkgray;
   border-radius: 5px;
   padding: 8px;
   display: block;
@@ -279,7 +286,7 @@ input {
   max-width: 180px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #49274A;
+  background-color: darkgray;
 }
 
 .catLocalInfo h2 {
@@ -295,4 +302,6 @@ input {
   line-height: 10px;
 }
 
-
+.updateCatHistory {
+  display: inline;
+}
