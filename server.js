@@ -20,7 +20,7 @@ require('./config/passport');
 // require our routes
 var indexRoutes = require('./routes/index');
 var catsRoutes = require('./routes/cats')
-var updatesRoutes = require('./routes/updates')
+// var updatesRoutes = require('./routes/updates')
 var caretakersRoutes = require('./routes/caretakers');
 
 // view engine setup
@@ -44,7 +44,7 @@ app.use(methodOverride('_method'));
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);
 app.use('/cats', catsRoutes);
-app.use('/', updatesRoutes);
+// app.use('/', updatesRoutes);
 app.use('/caretakers', caretakersRoutes);
 
 // catch 404 and forward to error handler
