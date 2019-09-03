@@ -1,15 +1,10 @@
 var router = require('express').Router();
 var passport = require('passport');
 var Cat = require('../models/cat');
+var catCtrl = require('../controllers/cats');
 
 // The root route renders our only view
-router.get('/', function(req, res) {
-  Cat.find({}, function(err, cats)
-  { 
-    let last3 = cats.slice(-3)
-    res.render('index', {cats: last3, user: req.user});
-  })
-});
+router.get('/', catCtrl.home);
 
  // Google OAuth login route
  router.get('/auth/google', passport.authenticate(

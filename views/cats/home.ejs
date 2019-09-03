@@ -1,0 +1,36 @@
+<%- include('./partials/header') %>
+
+  <div id="homeIntro">
+    <div id="introPhoto">      
+      <img src="images/gray-cat-with-toy.jpg" alt="Cat" height=500>
+    </div>
+    <div id="introMessage">
+        <h1>Volunteer <span>Together we can make a difference</span></h1>
+        <p><a href="/caretakers/new" class="btn">Foster Now</a></p>
+    </div>
+  </div>
+<br>
+<secion class="homeBody">
+  <h2 id="recentArrivals">Recent Arrivals:</h2>
+    <div class="bodyPhotos">
+        <% cats.forEach(function(cat) { %>
+          <div class="catInfo">
+              <div class="catImage"><img src="<%= cat.photoOne %>" alt="Cat" width=300>
+                  <div>
+                    <h2><%= cat.name %></h2>
+                    <h3><%= cat.years %> years, <%= cat.months %> months</h3>
+                    <a href="/cats/<%= cat._id %>" class="learnMore">Learn More</a>
+                  </div>
+              </div>
+          </div>
+          <% }); %>
+        </div>
+      </div>
+      <div>
+          <p><a href="cats" class="btn">View All Cats</a></p>
+      </div>
+
+    </div>
+</secion>
+
+<%- include('./partials/footer') %>
