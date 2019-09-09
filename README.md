@@ -11,11 +11,17 @@
 * HTML, CSS & JavaScript, Node, MongoDB, Mongoose
 
 ### **Wireframes:**
-![cat-foster-database-home-page](./images/home-page.png)
+![cat-foster-database-home-page-wireframe](./images/home-page.png)
 
-![cat-foster-database-available-cats](./images/available-cats.png)
+![cat-foster-database-available-cats-wireframe](./images/available-cats.png)
 
-![cat-foster-database-available-cats-details](./images/available-cats-details.png)
+![cat-foster-database-available-cats-details-wireframe](./images/available-cats-details.png)
+
+![cat-foster-database-home-page](./images/home-page-live-view.png)
+
+![cat-foster-database-available-cats](./images/available-cats-live-view.png)
+
+![cat-foster-database-available-cats-details](./images/add-a-cat-live-view.png)
 
 ### **User Stories:**
 As a visitor
